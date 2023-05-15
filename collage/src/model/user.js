@@ -1,0 +1,10 @@
+export const REGISTER = `insert into users(USER_FirstName,USER_LastName,USER_Phone,USER_Password,USER_Profile) value ?`;
+export const SELECT_PHONE =`select USER_Phone from users where USER_Phone=?`;
+export const LOGIN = `select * from users where USER_Phone=?`;
+export const SELECT_TOKEN = `select USER_ID from users where USER_ID=? AND USER_Disnable='NO'`;
+export const LASTLOGIN =`UPDATE users set USER_LastLogin = CURRENT_TIMESTAMP where USER_ID=?`;
+export const SELECT_PROFILE = `SELECT * FROM users WHERE USER_ID=?`;
+export const CHANGEPASSWORD = `UPDATE users SET USER_Password=? where USER_ID=?`;
+export const GETPASSWORD = `SELECT USER_Password FROM users WHERE USER_ID=?`;
+export const CHANGEFIRSTNAME=`UPDATE users SET USER_FirstName=? where USER_ID=?`;
+export const CHANGELASTNAME=`UPDATE users SET USER_LastName=? where USER_ID=?`;
